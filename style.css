@@ -1,0 +1,279 @@
+/* CSS Boilerplate */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  height: 90px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: rgb(61, 109, 231); */
+}
+
+#nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+  background-color: white;
+}
+
+#nav1 h4 {
+  font-size: 2.5vh;
+  font-weight: 200;
+}
+
+#nav2 {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+  margin-right: 2vw;
+  position: relative;
+}
+
+#nav2 button {
+  margin: 0 2px;
+  font-size: 20px;
+  padding: 10px 25px;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 50px;
+  border: none;
+  position: relative;
+}
+
+#nav2 button:nth-child(1) {
+  background-color: rgba(220, 220, 220, 0.11);
+  color: black;
+  position: relative;
+}
+
+#nav2 button:nth-child(1):after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 17px;
+  width: 7px;
+  height: 7px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+main {
+
+  width: 100%;
+  height: calc(100% - 90px);
+  /* background-color: rgba(39, 39, 65, 0.471); */
+}
+
+section {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+section h2 {
+  font-size: 5vw;
+  padding: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 5vw;
+}
+
+section p {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+section p:nth-child(1) {
+  background-color: rgba(224, 224, 121, 0.804);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+section button {
+  margin-top: 3vh;
+  font-size: 1.5vw;
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border: transparent;
+  border-radius: 20px;
+}
+
+
+#hero-marquee {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+#hero-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  display: flex;
+  gap: 20px;
+  animation: marquee 20s linear infinite;
+  /* Adjust animation duration as needed */
+}
+
+
+
+.element {
+  overflow: hidden;
+  flex-shrink: 0;
+  height: 340px;
+  width: 273px;
+  /* background-color: brown; */
+  border-radius: 45px;
+  position: relative;
+
+}
+
+.element img {
+  /* display: none; */
+  object-fit: cover;
+  object-position: center;
+}
+
+.element video {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.element .text-content {
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  color: white;
+  height: 30%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.text-content h1 {
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.text-content p {
+  padding: 5px 12px;
+  margin-top: 10px;
+  height: fit-content;
+  text-align: center;
+  border: 1px solid whitesmoke;
+  border-radius: 50px;
+  width: fit-content;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+#content {
+  height: 50%;
+  width: 100%;
+  margin-top: 6vw;
+  padding: 60px;
+}
+
+#content h1 {
+  text-align: center;
+  font-size: 5vw;
+  margin-bottom: 10vh;
+}
+
+#content .box img {
+  height: 320px;
+  width: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#content .box {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50px;
+  background-color: orange;
+  height: 320px;
+  width: 400px;
+  position: relative;
+  margin: 20px;
+}
+
+#content .box-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  height: 30%;
+  width: 400px;
+  bottom: -40%;
+  
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.303));
+  padding: 10px 25px;
+  color: white;
+  /* backdrop-filter: blur(0.1px); */
+}
+
+#content .box:hover .box-bottom {
+  bottom: 0;
+}
+
+#content .box:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.396);
+}
+
+.box-bottom h2 {
+  text-transform: capitalize;
+}
+.class-icon i{
+  padding : 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+footer {
+  height: 40%;
+}
